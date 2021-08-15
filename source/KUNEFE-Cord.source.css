@@ -435,17 +435,6 @@
 }
 
 
-/* Set Custom Status Popout */
-.menu-3sdvDG {
-  background-color: var(--background-primary);
-  opacity: 0.85;
-}
-.menu-3sdvDG:hover {
-  background-color: var(--background-primary);
-  opacity: 1;
-}
-
-
 /* Set Max Width for Channel Topic. */
 .topic-TCb_qw {
   max-width: 360px;
