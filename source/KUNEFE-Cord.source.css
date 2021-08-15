@@ -1,0 +1,693 @@
+/* Import everything we need to run this theme. */
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+@import url(https://nyri4.github.io/Discolored/main.css);
+
+
+/* Define Global Variables and Colours. */
+.theme-dark {
+  --background-primary: rgb(15, 16, 50);
+  --background-secondary: rgb(27, 28, 62);
+  --background-secondary-alt: rgb(27, 28, 62);
+  --background-tertiary: rgb(15, 16, 50);
+  --background-accent: rgb(27, 28, 62);
+  --background-floating: rgb(27, 28, 62);
+  --channeltextarea-background: rgb(27, 28, 62);
+  --scrollbar-auto-thumb: rgb(27, 28, 62);
+  --colour-blurple: rgb(114, 137, 218);
+  --scrollbar-auto-track: transparent;
+  --scrollbar-thin-thumb: rgb(27, 28, 62);
+  --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-auto-thumb);
+  --scrollbar-auto-scrollbar-color-track: var(--scrollbar-auto-track);
+}
+
+
+/* Swap the Title Brand */
+.titleBar-AC4pGV .wordmark-2iDDfm::after {
+    content: "KUNEFE-CORD";
+    position: absolute;
+    font-family: "Secular One";
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 14px;
+    top: 5px;
+    left: 10px;
+    width: 150px;
+}
+.titleBar-AC4pGV .wordmark-2iDDfm svg {
+    width: 0;
+}
+
+
+/* Settings Area */
+/* Hacky Implementations Ahead! */
+.info-1VyQPT:last-child::after {
+  content: "Running with the Kunefe Theme.";
+  text-transform: none;
+  font-size: 12px;
+  color: gray;
+}
+.info-1VyQPT {
+  position: absolute;
+  background-color: var(--background-primary);
+  border-radius: 8px 8px 0 0;
+  max-width: 224px;
+  top: -178px;
+}
+.side-8zPYf6 {
+  top: 152px;
+  position: relative;
+}
+.socialLinks-3jqNFy {
+  position: absolute;
+  top: -78px;
+  width: 100%;
+  background-color: rgb(16, 38, 78);
+  border-radius: 0 0 8px 8px;
+}
+.item-PXvHYJ[aria-controls="My Account-tab"],
+.item-PXvHYJ[aria-controls="Discord Nitro-tab"],
+.item-PXvHYJ[aria-controls="Appearance-tab"],
+.item-PXvHYJ[aria-controls="Keybinds-tab"],
+.item-PXvHYJ[aria-controls="Game Activity-tab"],
+.item-PXvHYJ[aria-controls="plugins-tab"],
+.item-PXvHYJ[aria-controls="Emotes-tab"] {
+  width: 38px;
+}
+.header-2RyJ0Y {
+  color: white;
+  text-align: left;
+}
+.separator-gCa7yv {
+  background-color: transparent;
+}
+.item-PXvHYJ[aria-controls="Profile Customization-tab"] {
+  left: 42px;
+  top: 22px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Privacy & Safety-tab"] {
+  left: 84px;
+  top: 22px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Authorized Apps-tab"] {
+  left: 126px;
+  top: 22px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Connections-tab"] {
+  left: 168px;
+  top: 22px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Nitro Server Boost-tab"] {
+  left: 42px;
+  top: 101px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Library Inventory-tab"] {
+  left: 84px;
+  top: 101px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Billing-tab"] {
+  left: 126px;
+  top: 101px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Accessibility-tab"] {
+  left: 42px;
+  top: 180px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Voice & Video-tab"] {
+  left: 84px;
+  top: 180px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Text & Images-tab"] {
+  left: 126px;
+  top: 180px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Notifications-tab"] {
+  left: 168px;
+  top: 180px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Language-tab"] {
+  left: 42px;
+  top: 214px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Streamer Mode-tab"] {
+  left: 84px;
+  top: 214px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Advanced-tab"] {
+  left: 126px;
+  top: 214px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Advanced-tab"] {
+  left: 126px;
+  top: 214px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Windows-tab"] {
+  left: 168px;
+  top: 214px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Windows-tab"] {
+  left: 168px;
+  top: 214px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Overlay-tab"] {
+  left: 42px;
+  top: 293px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Settings-tab"] {
+  left: 42px;
+  top: 366px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="Emotes-tab"] {
+  left: 84px;
+  top: 366px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="customcss-tab"] {
+  left: 126px;
+  top: 366px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="themes-tab"] {
+  left: 168px;
+  top: 366px;
+  width: 38px;
+  position: absolute;
+}
+.item-PXvHYJ[aria-controls="changelog-tab"] {
+  position: absolute;
+  top: -175px;
+  left: 182px;
+  width: 38px;
+  color: gray;
+  z-index: 1;
+}
+.item-PXvHYJ[aria-controls="logout-tab"] {
+  position: absolute;
+  top: -76px;
+  width: 38px;
+  left: 182px;
+  z-index: 1;
+}
+.item-PXvHYJ[aria-controls="Hypesquad Online-tab"] {
+  position: absolute;
+  top: 101px;
+  width: 38px;
+  left: 168px;
+  z-index: 1;
+}
+.bd-changelog-button {
+  margin-right: 26px;
+}
+
+
+/* Pin the Home Button. */
+.guilds-1SWlCJ .tree-2wKJdG:focus {
+  outline-color: transparent;
+}
+.guilds-1SWlCJ .scroller-1Bvpku {
+  contain: unset;
+  margin-top: 92px;
+}
+.guilds-1SWlCJ .scroller-1Bvpku .tutorialContainer-2sGCg9 {
+  position: fixed;
+  transform: translatey( -100% );
+}
+
+
+/* Update Notification */
+#app-mount .app-2rEoOp::before {
+    content: "Your installation of the Kunefe Theme Loader is outdated, you are currently running version 0.0.1, please update as soon as possible.";
+    display: var(--version-0_0_1, block);
+    background-color: var(--background-primary);
+    border-bottom: solid 6px var(--background-secondary);
+    color: white;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 600;
+    text-align: center;
+    z-index: 101;
+}
+
+
+/* Text Area */
+.scrollableContainer-2NUZem {
+  border-radius: 0 0 12px 12px;
+}
+.form-2fGMdU, .channelTextArea-rNsIhG, .channelTextArea-2VhZ6z {
+  margin-bottom: 5px;
+}
+.typing-2GQL18 {
+  position: static;
+  max-height: 16px;
+}
+.channelTextArea-rNsIhG [class*="autocomplete-"] { 
+  background: var(--background-secondary);
+}
+.channelTextArea-rNsIhG [class*="selected-"] { 
+  background: var(--background-primary);
+}
+.channelTextArea-rNsIhG [class*="categoryHeader-"] { 
+  background: var(--background-secondary);
+}
+
+
+/* Selection and other small things. */
+::selection {
+  background: rgb(44, 46, 173);
+}
+.spine--Wla_O {
+  color: gray;
+}
+
+
+/* DMs List flooding with E-Girls today. */
+.categoryItem-3zFJns .itemInner-3gVXMG,
+.clickable-1JJAn8,
+.layout-2DM8Md {
+    transition: all .4s ease
+}
+.categoryItem-3zFJns.selectedCategoryItem-3X8ujp .itemInner-3gVXMG,
+.clickable-1JJAn8:hover .layout-2DM8Md,
+.selected-aXhQR6 .layout-2DM8Md {
+    background: var(--background-primary);
+    position: relative;
+    padding-left: 18px
+}
+.selected-aXhQR6 .layout-2DM8Md::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    border-radius: 4px 0 0 4px;
+    background: var(--background-primary);
+    opacity: .6;
+    z-index: 0
+}
+.selected-aXhQR6 .layout-2DM8Md::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    border-radius: 4px 0 0 4px;
+    background: var(--colour-blurple);
+    z-index: 1
+}
+.clickable-1JJAn8:hover .layout-2DM8Md,
+.selected-aXhQR6 .layout-2DM8Md {
+    background-color: var(--background-primary);
+}
+
+
+/* Make the Side Thread Resizeable. */
+:root {
+    --sidebar-width: 240px;
+}
+.chat-3bRxxu, .threadSidebarOpen-vdkwIh {
+    resize: horizontal;
+    min-width: 40px !important;
+    max-width: unset !important;
+}
+.chat-3bRxxu:not(.threadSidebarOpen-vdkwIh) {
+    width: unset !important;
+    flex: 1 1 auto;
+}
+.threadSidebar-1o3BTy {
+    width: unset !important;
+    flex: 1 1 auto;
+}
+
+
+/* Channel and User List */
+.members-1998pB {
+  border-radius: 10px !important;
+  margin: 8px;
+}
+.icon-1DeIlz {
+  width: 16.5px;
+  height: 16.5px;
+  margin-right: 6px;
+  color: white !important;
+}
+.iconContainer-1BBaeJ {
+  margin-right: 8px;
+}
+.unreadBar-3t3sYc {
+  background-color: var(--colour-blurple);
+}
+.containerDefault--pIXnN .content-1x5b-n {
+    transition: all .4s ease;
+}
+.containerDefault--pIXnN.selected-37j_iU .modeSelected-346R90 .content-1x5b-n,
+.containerDefault--pIXnN.selected-37j_iU .modeSelected-346R90:hover .content-1x5b-n,
+.modeSelected-346R90 .content-1x5b-n,
+.modeSelected-346R90:hover .content-1x5b-n {
+    position: relative;
+    background-color: var(--background-primary);
+    padding-left: 18px;
+}
+.containerDefault--pIXnN.selected-37j_iU .modeSelected-346R90 .content-1x5b-n::before,
+.modeSelected-346R90 .content-1x5b-n::before,
+.modeSelected-346R90:hover .content-1x5b-n::before {
+    position: absolute;
+    left: -1px;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    border-radius: 4px 0 0 4px;
+    background: var(--background-primary);
+    z-index: 0
+}
+.modeSelected-346R90 .content-1x5b-n::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    border-radius: 4px 0 0 4px;
+    background: var(--colour-blurple);
+    z-index: 1
+}
+.containerDefault--pIXnN .wrapper-2jXpOf:hover .content-1x5b-n {
+    background-color: var(--background-primary);
+    padding-left: 12px
+}
+
+
+/* User Popout */
+.userPopout-xaxa6l, .bodyInnerWrapper-26fQXj {
+  background-color: var(--background-primary);
+  border-radius: 16px;
+  opacity: 0.85;
+}
+.userPopout-xaxa6l:hover, .bodyInnerWrapper-26fQXj:hover {
+  background-color: var(--background-primary);
+  border-radius: 16px;
+  opacity: 1;
+}
+.footer-3UKYOU {
+  background-color: var(--background-primary);;
+}
+
+
+/* Change the User Area's Background properly */
+.panels-j1Uci_ {
+  background-color: var(--background-primary) !important;
+}
+
+
+/* Server List Stuff */
+.pill-1z4sAY, .wrapper-sa6paO {
+  color: var(--color-blurple);
+}
+
+
+/* Set Custom Status Popout */
+.menu-3sdvDG {
+  background-color: var(--background-primary);
+  opacity: 0.85;
+}
+.menu-3sdvDG:hover {
+  background-color: var(--background-primary);
+  opacity: 1;
+}
+
+
+/* Set Max Width for Channel Topic. */
+.topic-TCb_qw {
+  max-width: 360px;
+}
+
+
+/* Blur Effect and Colour Fix for Modals. */
+.layer-2KE1M9, .modal-3c3bKg {
+  backdrop-filter: blur(2.5px);
+}
+:root .modal-yWgWj-, :root .root-1gCeng, :root .uploadModal-2ifh8j {
+  border-radius: 12px;
+  background-color: var(--background-primary);
+}
+:root .footer-2gL1pp, :root .footer-3mqk7D {
+  background-color: var(--background-secondary);
+  border-radius: 12px;
+}
+
+
+/* Tooltips */
+.tooltipPrimary-1d1ph4,
+.toolbar-2bjZV7 {
+  background-color: var(--background-primary) !important;
+}
+.toolbar-2bjZV7:before {
+  border-top-color: var(--background-primary);
+}
+.tooltipPrimary-1d1ph4 .tooltipPointer-3ZfirK {
+  border-top-color: var(--background-primary) !important;
+}
+
+
+/* Friend list tab */
+.friendSelected-1sa4bG {
+  background-color: var(--background-tertiary) !important;
+}
+.outer-1AjyKL.interactive-3B9GmY:hover {
+  background-color: var(--background-tertiary) !important;
+}
+.inset-3sAvek,
+.separator-XqIyoz {
+  background-color: var(--background-secondary) !important;
+}
+.text-3MU_QQ {
+  max-width: 485px;
+}
+.pageWrapper-1PgVDX,
+.container-1D34oG {
+  background-color: var(--background-primary) !important;
+}
+
+
+/* Embeds */
+.wrapperAudio-1jDe0Q {
+  width: auto !important;
+  min-width: 400px;
+}
+.embedWrapper-lXpS3L.embedFull-2tM8-- {
+  border-radius: 8px;
+  border-left: transparent;
+  border-top: 4px solid var(--background-tertiary);
+  box-shadow: var(--elevation-high);
+}
+
+
+/* Server Boost Modal */
+.perksModal-fSYqOq {
+  background-color: var(--background-primary) !important;
+}
+.tierMarkerBackground-3q29am,
+.expandedInfo-3kfShd,
+.tierBody-16Chc9,
+.perk-2WeBWW {
+  background-color: var(--background-tertiary) !important;
+}
+.roleIcon-F8XDd3 {
+  color: var(--background-accent);
+}
+
+
+/* Search Input */
+.searchBar-3dMhjb {
+  background-color: none;
+  border-radius: 0 0 0 0;
+  transition: all .4s ease;
+  position: static;
+  width: 36px;
+  overflow: hidden;
+  max-width: 230px !important;
+  margin-left: 12px;
+}
+.libraryFilter-31ZUa2 {
+  order: 1;
+  transition: all .4s ease;
+  margin-left: 16px;
+}
+.container-1r6BKw.themed-ANHk51 .search-36MZv- {
+  order: 1;
+  margin-left: 4px;
+  border-left: 2px solid var(--background-secondary);
+}
+.icon-3cZ1F_, .icon-1S6UIr {
+  height: 21px;
+  width: 21px;
+  top: -2px;
+}
+.icon-38sknP {
+  margin-right: 8px;
+}
+.searchBar-3dMhjb:hover {
+  width: 230px;
+  border-radius: 6px !important;
+  background-color: var(--background-secondary);
+}
+.libraryFilter-31ZUa2:hover {
+  width: 240px;
+}
+.searchBar-3dMhjb[aria-expanded="true"] {
+  width: 230px;
+  border-radius: 6px !important;
+  background-color: var(--background-secondary);
+}
+
+
+/* Search Popouts */
+.container-3ayLPN {
+  background: var(--background-secondary) !important;
+  box-shadow: var(--background-tertiary) !important;
+  opacity: 0.85;
+}
+.container-3ayLPN:hover {
+  background: var(--background-secondary) !important;
+  box-shadow: var(--background-tertiary) !important;
+  opacity: 1;
+}
+.option-96V44q:after {
+  display: none !important;
+}
+.option-96V44q.selected-rZcOL-,
+.input-2VB9rf {
+  background-color: var(--background-tertiary) !important;
+}
+.searchAnswer-3Dz2-q,
+.searchFilter-2ESiM3 {
+  background-color: var(--background-secondary) !important;
+}
+.focused-2bY0OD {
+  background-color: var(--background-tertiary) !important;
+}
+.container-3ayLPN {
+  background-color: var(--background-tertiary) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--elevation-high) !important;
+}
+
+
+
+
+/*********************************************************/
+/*                   Removals & Reverts.                 */
+/*********************************************************/
+
+
+/* Revert Discord to the Old Legacy Font. */
+body {
+	--font-display: var(--font-primary);
+}
+
+/* Remove AKA Badge if user has Nicknames. */
+.akaBadge-1M-1Gw {
+  display: none;
+}
+
+/* Remove the Active Threads Button. */
+a[data-list-item-id="channels___guild-active-threads"] {
+    display: none;
+}
+
+/* Revert the Role Redesign. */
+.role-2irmRk{
+  background: transparent;
+  border: 1px solid;
+  border-radius: 11px;
+}
+.roleCircle-3xAZ1j {
+  margin-left: 0;
+}
+.addButton-pcyyf6.role-2irmRk {
+  border-color: #4f545c;
+}
+.addButtonIcon-1NMJ8u {
+  width: 10px;
+  height: 10px;
+}
+
+/* Remove Nitro gift button from Chat */
+button[aria-label="Send a gift"] {
+    display: none;
+}
+
+/* Remove Nitro Button from User Banners */
+.premiumIconWrapper-1A-UH5 {
+    display: none;
+}
+
+/* Remove GIF picker button */
+button[aria-label="Open GIF picker"] {
+    display: none;
+}
+
+/* Remove Sticker Picker button */
+button[aria-label="Open sticker picker"] {
+    display: none;
+}
+
+/* Remove the Nitro Button from the Home area. */
+.privateChannels-1nO12o .channel-2QD9_O[href="/store"] {
+    display: none;
+}
+
+/* Remove Help Button from Toolbar. */
+.clickable-3rdHwn[aria-label="Help"]{
+    display: none;
+}
+
+/* Remove Nitro Icon from Settings Nitro tab and de-value Nitro even further. */
+.icon-Zc-uZZ {
+    display: none;
+}
+.premiumTabItem-1QTfBr[aria-selected="true"] {
+   background-color: var(--background-modifier-selected) !important;
+}
