@@ -423,12 +423,6 @@
 .userPopout-xaxa6l, .bodyInnerWrapper-26fQXj {
   background-color: var(--background-primary);
   border-radius: 16px;
-  opacity: 0.85;
-}
-.userPopout-xaxa6l:hover, .bodyInnerWrapper-26fQXj:hover {
-  background-color: var(--background-primary);
-  border-radius: 16px;
-  opacity: 1;
 }
 .footer-3UKYOU {
   background-color: var(--background-primary);;
