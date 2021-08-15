@@ -1,0 +1,33 @@
+/**
+    * @name KUNEFE-Cord
+    * @version 0.0.1
+    * @description A theme for Discord that aims to improve the User Interface in many ways.
+    * @author Idle Development
+    *
+    * @website https://idledev.org
+    * @source https://github.com/IdleDevelopment/kunefe-cord
+**/
+
+
+/* Import everything we need to run this theme. */
+@import url(https://idledevelopment.github.io/kunefe-cord/source/KUNEFE-Cord.minified.css);
+
+
+
+
+/* START OF KUNEFE LOADER VERSION STRING */
+/* [!] DO NOT MODIFY MANUALLY, USED FOR DEVELOPMENTAL PURPOSES. [!] */
+
+/* 
+Updates would usually be seamless, but
+in some cases, updates will require manual
+attention, that's why we define the version
+of the loader, to display a notification 
+once we need to do so for the user to know.
+*/
+
+:root {
+  --version-0_0_1: none;
+}
+
+/* END OF KUNEFE LOADER VERSION STRING */
