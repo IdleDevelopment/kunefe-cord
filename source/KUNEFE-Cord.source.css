@@ -427,11 +427,17 @@
 .footer-3UKYOU {
   background-color: var(--background-primary);;
 }
-
-
-/* Change the User Area's Background properly */
 .panels-j1Uci_ {
   background-color: var(--background-primary) !important;
+}
+
+
+/* Change more Background Colours */
+.menu-3sdvDG[aria-label="Set status"] {
+background-color: var(--background-primary);
+}
+.menu-3sdvDG[aria-label="Server actions"] {
+background-color: var(--background-primary);
 }
 
 
