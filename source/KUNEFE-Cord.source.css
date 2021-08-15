@@ -631,6 +631,11 @@ a[data-list-item-id="channels___guild-active-threads"] {
     display: none;
 }
 
+/* Remove Threads Count from Channel Toolbar. */
+.count-bFJRJm {
+    display: none;
+}
+
 /* Revert the Role Redesign. */
 .role-2irmRk{
   background: transparent;
