@@ -1,8 +1,8 @@
 /* Import everything we need to run this theme. */
-@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Secular+One&display=swap);
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
 @import url(https://nyri4.github.io/Discolored/main.css);
-
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css);
 
 /* Define Global Variables and Colours. */
 .theme-dark {
@@ -19,6 +19,11 @@
   --scrollbar-thin-thumb: rgb(27, 28, 62);
   --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-auto-thumb);
   --scrollbar-auto-scrollbar-color-track: var(--scrollbar-auto-track);
+}
+:root {
+  --settingsmodalbackground: transparent;
+  --settingsmodalwidth: 1024px;
+  --settingsmodalheight: 92vh;
 }
 
 
@@ -49,31 +54,44 @@
   font-size: 12px;
   color: gray;
 }
+#app-mount .layer-3QrUeG ~ .layer-3QrUeG {
+  border-radius: 14px !important;
+}
+.layers-3iHuyZ > .layer-3QrUeG.stop-animations:first-child > .container-2lgZY8 > .base-3dtUhz > .content-98HsJk,
+.layers-3iHuyZ > .layer-3QrUeG.stop-animations:first-child > .container-2lgZY8 > .guilds-1SWlCJ { /*Blurs the background behind the settings window*/
+  -webkit-filter: blur(2.5px);
+  filter: blur(2.5px);
+}
 .info-1VyQPT {
-  position: absolute;
   background-color: var(--background-primary);
-  border-radius: 8px 8px 0 0;
+  border-radius: 0 0 8px 8px;
   max-width: 224px;
-  top: -178px;
+  position: absolute;
+  top: 472px;
+}
+.sidebarRegionScroller-3MXcoP {
+  border-radius: 0 52px 0 0;
 }
 .side-8zPYf6 {
-  top: 152px;
   position: relative;
 }
 .socialLinks-3jqNFy {
-  position: absolute;
-  top: -78px;
   width: 100%;
+  order: 1;
+  top: 436px;
+  position: absolute;
   background-color: rgb(16, 38, 78);
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px 8px 0 0;
 }
-.item-PXvHYJ[aria-controls="My Account-tab"],
-.item-PXvHYJ[aria-controls="Discord Nitro-tab"],
-.item-PXvHYJ[aria-controls="Appearance-tab"],
-.item-PXvHYJ[aria-controls="Keybinds-tab"],
-.item-PXvHYJ[aria-controls="Game Activity-tab"],
-.item-PXvHYJ[aria-controls="plugins-tab"],
-.item-PXvHYJ[aria-controls="Emotes-tab"] {
+.contentColumn-2hrIYH {
+  margin-top: 32px;
+}
+.item-PXvHYJ[aria-controls="my-account-tab"],
+.item-PXvHYJ[aria-controls="discord-nitro-tab"],
+.item-PXvHYJ[aria-controls="appearance-tab"],
+.item-PXvHYJ[aria-controls="keybinds-tab"],
+.item-PXvHYJ[aria-controls="game-activity-tab"],
+.item-PXvHYJ[aria-controls="plugins-tab"] {
   width: 38px;
 }
 .header-2RyJ0Y {
@@ -83,123 +101,112 @@
 .separator-gCa7yv {
   background-color: transparent;
 }
-.item-PXvHYJ[aria-controls="Profile Customization-tab"] {
+.item-PXvHYJ[aria-controls="profile-customization-tab"] {
   left: 42px;
   top: 22px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Privacy & Safety-tab"] {
+.item-PXvHYJ[aria-controls="privacy-&-safety-tab"] {
   left: 84px;
   top: 22px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Authorized Apps-tab"] {
+.item-PXvHYJ[aria-controls="authorized-apps-tab"] {
   left: 126px;
   top: 22px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Connections-tab"] {
+.item-PXvHYJ[aria-controls="connections-tab"] {
   left: 168px;
   top: 22px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Nitro Server Boost-tab"] {
+.item-PXvHYJ[aria-controls="nitro-server-boost-tab"] {
   left: 42px;
   top: 101px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Library Inventory-tab"] {
+.item-PXvHYJ[aria-controls="library-inventory-tab"] {
   left: 84px;
   top: 101px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Billing-tab"] {
+.item-PXvHYJ[aria-controls="billing-tab"] {
   left: 126px;
   top: 101px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Accessibility-tab"] {
+.item-PXvHYJ[aria-controls="accessibility-tab"] {
   left: 42px;
   top: 180px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Voice & Video-tab"] {
+.item-PXvHYJ[aria-controls="voice-&-video-tab"] {
   left: 84px;
   top: 180px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Text & Images-tab"] {
+.item-PXvHYJ[aria-controls="text-&-images-tab"] {
   left: 126px;
   top: 180px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Notifications-tab"] {
+.item-PXvHYJ[aria-controls="notifications-tab"] {
   left: 168px;
   top: 180px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Language-tab"] {
+.item-PXvHYJ[aria-controls="language-tab"] {
   left: 42px;
   top: 214px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Streamer Mode-tab"] {
+.item-PXvHYJ[aria-controls="streamer-mode-tab"] {
   left: 84px;
   top: 214px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Advanced-tab"] {
+.item-PXvHYJ[aria-controls="advanced-tab"] {
   left: 126px;
   top: 214px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Advanced-tab"] {
-  left: 126px;
-  top: 214px;
-  width: 38px;
-  position: absolute;
-}
-.item-PXvHYJ[aria-controls="Windows-tab"] {
+.item-PXvHYJ[aria-controls="windows-tab"] {
   left: 168px;
   top: 214px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Windows-tab"] {
-  left: 168px;
-  top: 214px;
-  width: 38px;
-  position: absolute;
-}
-.item-PXvHYJ[aria-controls="Overlay-tab"] {
+.item-PXvHYJ[aria-controls="overlay-tab"] {
   left: 42px;
   top: 293px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Settings-tab"] {
+.item-PXvHYJ[aria-controls="settings-tab"] {
   left: 42px;
   top: 366px;
   width: 38px;
   position: absolute;
 }
-.item-PXvHYJ[aria-controls="Emotes-tab"] {
+.item-PXvHYJ[aria-controls="emotes-tab"] {
   left: 84px;
   top: 366px;
+  width: 38px;
   position: absolute;
 }
 .item-PXvHYJ[aria-controls="customcss-tab"] {
@@ -216,7 +223,7 @@
 }
 .item-PXvHYJ[aria-controls="changelog-tab"] {
   position: absolute;
-  top: -175px;
+  top: 476px;
   left: 182px;
   width: 38px;
   color: gray;
@@ -224,12 +231,12 @@
 }
 .item-PXvHYJ[aria-controls="logout-tab"] {
   position: absolute;
-  top: -76px;
   width: 38px;
+  top: 438px;
   left: 182px;
   z-index: 1;
 }
-.item-PXvHYJ[aria-controls="Hypesquad Online-tab"] {
+.item-PXvHYJ[aria-controls="hypesquad-online-tab"] {
   position: absolute;
   top: 101px;
   width: 38px;
@@ -238,35 +245,6 @@
 }
 .bd-changelog-button {
   margin-right: 26px;
-}
-
-
-/* Pin the Home Button. */
-.guilds-1SWlCJ .tree-2wKJdG:focus {
-  outline-color: transparent;
-}
-.guilds-1SWlCJ .scroller-1Bvpku {
-  contain: unset;
-  margin-top: 92px;
-}
-.guilds-1SWlCJ .scroller-1Bvpku .tutorialContainer-2sGCg9 {
-  position: fixed;
-  transform: translatey( -100% );
-}
-
-
-/* Update Notification */
-#app-mount .app-2rEoOp::before {
-    content: "Your installation of the Kunefe Theme Loader is outdated, you are currently running version 0.0.1, please update as soon as possible.";
-    display: var(--version-0_0_1, block);
-    background-color: var(--background-primary);
-    border-bottom: solid 6px var(--background-secondary);
-    color: white;
-    font-size: 14px;
-    line-height: 36px;
-    font-weight: 600;
-    text-align: center;
-    z-index: 101;
 }
 
 
@@ -359,6 +337,34 @@
 .threadSidebar-1o3BTy {
     width: unset !important;
     flex: 1 1 auto;
+}
+
+
+/* Settings/Deafen/Mute Buttons Animated */
+.button-14-BFJ:hover .contents-18-Yxp {
+  animation: UserModalButtons 0.5s normal ease;
+}
+.container-3baos1 .noWrap-3jynv6 {
+  width: 100px;
+  opacity: 1;
+}
+.button-14-BFJ {
+  transition: 0.2s;
+}
+.button-14-BFJ:hover {
+  padding-bottom: 0px;
+  transition: 0.2;
+}
+@keyframes UserModalButtons {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 
@@ -570,12 +576,6 @@ background-color: var(--background-primary);
 .container-3ayLPN {
   background: var(--background-secondary) !important;
   box-shadow: var(--background-tertiary) !important;
-  opacity: 0.85;
-}
-.container-3ayLPN:hover {
-  background: var(--background-secondary) !important;
-  box-shadow: var(--background-tertiary) !important;
-  opacity: 1;
 }
 .option-96V44q:after {
   display: none !important;
