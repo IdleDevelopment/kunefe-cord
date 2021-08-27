@@ -607,7 +607,7 @@ background-color: var(--background-primary);
 
 /* Revert Discord to the Old Legacy Font. */
 body {
-	--font-display: var(--font-primary);
+  --font-display: var(--font-primary);
 }
 
 /* Remove AKA Badge if user has Nicknames. */
